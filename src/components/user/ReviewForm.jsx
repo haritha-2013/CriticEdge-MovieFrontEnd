@@ -4,7 +4,6 @@ import axios from "axios";
 const ReviewForm = () => {
     const [name, setName] = useState('');
     const [review, setReview] = useState('');
-    const [rating, setRating] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [successMessage, setSuccessMessage] = useState('');
     const[errorMessage, setErrorMessage] = useState('');
@@ -19,8 +18,7 @@ const ReviewForm = () => {
             await axios.post(`http://localhost:3000/api/reviews`, {
                 name,
                 review,
-                rating
-            });
+               });
 
             setSuccessMessage('Review submitted successfully !');
             setName('');
@@ -31,8 +29,7 @@ const ReviewForm = () => {
             setErrorMessage('Error submitting review. Please try again later.')
             
         }
-
-        setIsSubmitting(false);
+         setIsSubmitting(false);
     };
 
     return (
@@ -60,23 +57,6 @@ const ReviewForm = () => {
             onChange={(e) => setReview(e.target.value)}
             rows='4'
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md -shadow-sm focus:outline-none focus:ring-indigo-500 sm-text-sm"
-            required
-           />
-           </div>
-
-           <div>
-            <label htmlFor="rating" className="block text-sm font-medium text-gray-700">
-           Rating (1-5)
-           </label>
-
-           <input 
-           type="number"
-           id="rating"
-           value={rating}
-           onChange={(e) => setRating(e.target.value)} 
-           min="1"
-           max="5"
-           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             required
            />
            </div>

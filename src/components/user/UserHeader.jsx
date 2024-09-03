@@ -4,7 +4,7 @@ import { CircleUserRound, Heart } from 'lucide-react';
 import { DarkMode } from '../ui/DarkMode';
 import { SearchBar } from '../SearchBar';
 
-export const UserHeader =  ({ onSeach }) => {
+export const UserHeader =  ({ onSearch }) => {
   return (
     <div className='flex items-center justify-between  w-full h-32 px-20 shadow-xl bg-cover '>
         <div>
@@ -16,10 +16,9 @@ export const UserHeader =  ({ onSeach }) => {
     <Link to={'/movies'}>Films</Link>
     <Link to={'/reviews'}>My reviews</Link>
 
-    <SearchBar onSeach={onSeach}/>
+    <SearchBar onSearch={onSearch}/>
     <CircleUserRound />
-    <Heart />
-        </nav>
+    </nav>
         
         <div className='flex items-center gap-8'>
         <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Journals</button>
