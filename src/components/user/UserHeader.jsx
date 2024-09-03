@@ -6,15 +6,16 @@ import { SearchBar } from '../SearchBar';
 
 export const UserHeader =  ({ onSeach }) => {
   return (
-    <div className='flex items-center justify-between w-full h-32 px-20 shadow-xl'>
+    <div className='flex items-center justify-between  w-full h-32 px-20 shadow-xl bg-cover '>
         <div>
-            <h1 className='text 4xl font-bold'>Logo</h1>
+        <img src="https://res.cloudinary.com/decxaepjd/image/upload/v1725304082/LOGO_mxbz99.png" alt="" />
         </div>
 
         <nav className='flex gap-12 font-semibold'>
     <Link to={'/'}>Home</Link>
     <Link to={'/movies'}>Films</Link>
-    <Link to={'/movies'}>My reviews</Link>
+    <Link to={'/reviews'}>My reviews</Link>
+
     <SearchBar onSeach={onSeach}/>
     <CircleUserRound />
     <Heart />

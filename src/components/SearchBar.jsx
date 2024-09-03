@@ -14,7 +14,7 @@ export const SearchBar = ({ onSeach }) => {
         }
     };
   return (
-    <form omSubmit = {handleSearch}className='flex items-center space-x-2'>
+    <form onSubmit = {handleSearch}className='flex items-center space-x-2'>
         <input type="text" 
         value={query}
         onChange={handleInputChange}
