@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from 'react-router-dom';
 import ReviewForm from "../../components/user/ReviewForm";
- 
-const MovieDetailPage = () => {
+
+export const MovieDetailPage = () => {
     const { id } = useParams(); // To get the id from the parametrs
     const [movie, setMovie] = useState(null); // to store the details of the movie
     const [error, setError] = useState(null); // to store any errors
@@ -52,4 +52,3 @@ return (
 );
 };
 
-export default MovieDetailPage;
