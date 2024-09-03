@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const MoviesPage = () => {
+export const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [year, setYear] = useState('');
   const [popular, setPopular] = useState('');
@@ -105,6 +105,6 @@ const MoviesPage = () => {
   );
 };
 
-export default MoviesPage;
+
 
 
