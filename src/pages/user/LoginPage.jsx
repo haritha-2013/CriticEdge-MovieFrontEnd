@@ -30,15 +30,9 @@ navigate('/')
    }catch (error) {
     toast.error('Login failed')
     console.log(error);
-    
-   }
-
-
-  };
-
-
-
-  return (
+  }
+};
+return (
     <div className="hero bg-base-200 py-20">
   <div className="hero-content flex-col lg:flex-row">
     <div className="text-center lg:text-left">
